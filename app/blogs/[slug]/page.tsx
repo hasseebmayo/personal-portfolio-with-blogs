@@ -24,10 +24,10 @@ export const generateMetadata = ({
    title: post.title,
    description: post.description,
    type: 'article',
-   url: post.url,
+   url:process.env.NEXT_PUBLIC_URL +  post.url,
    images: [
     {
-     url: 'process.env.NEXT_PUBLIC_URL/' + post.image,
+     url: process.env.NEXT_PUBLIC_URL + post.image,
      width: 1200,
      height: 630,
      alt: post.title,
