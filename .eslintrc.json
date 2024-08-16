@@ -1,0 +1,14 @@
+{
+ "extends": [
+  "eslint:recommended",
+  "next",
+  "plugin:react/recommended",
+  "plugin:@typescript-eslint/recommended",
+  "prettier"
+ ],
+ "rules": {
+  "react/react-in-jsx-scope": "off",
+  "react/prop-types": "off"
+ },
+ "ignorePatterns": ["next-env.d.ts", "node_modules"]
+}

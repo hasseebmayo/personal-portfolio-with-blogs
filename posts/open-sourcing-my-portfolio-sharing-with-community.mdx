@@ -1,0 +1,99 @@
+---
+title: Open Sourcing My Portfolio Sharing My Work with the Community
+description: I’m excited to share my personal portfolio as an open-source project! Explore the code and design to gain insights into my web development skills and experience. I hope this contributes to the community and offers valuable learning resources
+date: Saturday, Aug 17, 2024
+image: /portfolio.jpeg
+---
+
+![Portfolio Sharing](/portfolio.jpeg)
+
+## How to Use and Customize  Portfolio
+You can get started with my open-source portfolio by cloning the [GitHub repository](https://github.com/hasseebmayo). Follow the instructions provided in the repo to install the necessary dependencies.
+
+## Customizing Your Experience
+To update your experience section:
+* Navigate to the experience.ts file.
+* Modify the content according to your personal experience
+
+For education details:
+* Go to the */(portfolio)/education.tsx* file.
+* Update the information as needed.
+
+To adjust your skills:
+* Edit the relevant sections in the skills file */(portfolio)/Skill.tsx* .
+
+
+## Adding Blog Posts
+* Go to the posts folder.
+* Create a new MDX file. The title of this file will be used as the slug for the post and you can also date to track the file published date.
+* Include an image, title, and description for the post. These will be used to generate dynamic previews when sharing the link
+see the below example code.
+
+
+```mdx
+---
+title : Open Sourcing My Portfolio: Sharing My Work with the Community
+description : I’m excited to share my personal portfolio as an open-source project! Explore the code and design to gain insights into my web development skills and experience. I hope this contributes to the community and offers valuable learning resources.
+date : Thursday, July 4, 2024
+image : /PostImage.jpeg
+---
+```
+
+## Custom Component
+Currenlty i have created two custom components to use in mdx.
+* Callout Card  (Which is basically show if you have to show some important message)
+* MdxCard (The whole card will be clickable if href is provided )
+
+##  Callout Card
+
+### Type "danger"
+
+<Callout type="danger">
+ This is simple callout component you can use.
+</Callout>
+
+```mdx
+<Callout type="danger">
+ This is simple callout component you can use.
+</Callout>
+```
+### Type "default"
+
+<Callout type="default">
+ This is simple callout component you can use.
+</Callout>
+
+```mdx
+<Callout type="default">
+ This is simple callout component you can use.
+</Callout>
+```
+### Type "waring"
+
+<Callout type="warning">
+ This is simple callout component you can use.
+</Callout>
+
+```mdx
+<Callout type="warning">
+ This is simple callout component you can use.
+</Callout>
+```
+
+
+## Mdx Card
+<Card href="process.env.NEXT_PUBLIC_URL">
+This is Mdx Card the content inside of the card will be shown like this
+</Card>
+
+```mdx
+<Card href="https://hasseebmayo.com">
+This is Mdx Card the content inside of the card will be shown like this
+</Card>
+```
+
+
+## Add CustomComponents
+
+You can also add your custom components in mdx.Create a specific component and import in main *index.tsx* file in mdx *folder*.
+And use like other custom components.
